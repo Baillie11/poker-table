@@ -8,78 +8,91 @@
 </head>
 <body>
   <div class="table-container">
-    <div class="poker-table">
 
-      <!-- Community Cards (empty to start) -->
-      <div class="community-cards">
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
+    <div class="table-and-buttons">
+
+      <!-- Poker Table -->
+      <div class="poker-table">
+
+        <!-- Community Cards (empty to start) -->
+        <div class="community-cards">
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+        </div>
+
+        <!-- Pot -->
+        <div class="pot">Pot: $0</div>
+
+        <!-- Players -->
+        <div class="player seat1">
+          <div class="player-name" id="player1Name">Player 1</div>
+          <div class="player-stack">$1500</div>
+          <div class="player-cards">
+            <div class="card small"></div>
+            <div class="card small"></div>
+          </div>
+        </div>
+        <div class="player seat2">
+          <div class="player-name">Player 2</div>
+          <div class="player-stack">$1500</div>
+          <div class="player-cards">
+            <div class="card small"></div>
+            <div class="card small"></div>
+          </div>
+        </div>
+        <div class="player seat3">
+          <div class="player-name">Player 3</div>
+          <div class="player-stack">$1500</div>
+          <div class="player-cards">
+            <div class="card small"></div>
+            <div class="card small"></div>
+          </div>
+        </div>
+        <div class="player seat4">
+          <div class="player-name">Player 4</div>
+          <div class="player-stack">$1500</div>
+          <div class="player-cards">
+            <div class="card small"></div>
+            <div class="card small"></div>
+          </div>
+        </div>
+        <div class="player seat5">
+          <div class="player-name">Player 5</div>
+          <div class="player-stack">$1500</div>
+          <div class="player-cards">
+            <div class="card small"></div>
+            <div class="card small"></div>
+          </div>
+        </div>
+        <div class="player seat6">
+          <div class="player-name">Player 6</div>
+          <div class="player-stack">$1500</div>
+          <div class="player-cards">
+            <div class="card small"></div>
+            <div class="card small"></div>
+          </div>
+        </div>
       </div>
 
-      <!-- Pot -->
-      <div class="pot">Pot: $0</div>
+      <!-- Side Button Panel -->
+      <div class="side-button-panel">
+        <button class="register-button" onclick="window.location.href='register.html'">Register to Play</button>
+        <button class="deal-button">Deal Cards</button>
+        <button class="reset-button">Reset Hand</button>
+      </div>
 
-      <!-- Players -->
-      <div class="player seat1">
-        <div class="player-name">Player 1</div>
-        <div class="player-stack">$1500</div>
-        <div class="player-cards">
-          <div class="card small"></div>
-          <div class="card small"></div>
-        </div>
-      </div>
-      <div class="player seat2">
-        <div class="player-name">Player 2</div>
-        <div class="player-stack">$1500</div>
-        <div class="player-cards">
-          <div class="card small"></div>
-          <div class="card small"></div>
-        </div>
-      </div>
-      <div class="player seat3">
-        <div class="player-name">Player 3</div>
-        <div class="player-stack">$1500</div>
-        <div class="player-cards">
-          <div class="card small"></div>
-          <div class="card small"></div>
-        </div>
-      </div>
-      <div class="player seat4">
-        <div class="player-name">Player 4</div>
-        <div class="player-stack">$1500</div>
-        <div class="player-cards">
-          <div class="card small"></div>
-          <div class="card small"></div>
-        </div>
-      </div>
-      <div class="player seat5">
-        <div class="player-name">Player 5</div>
-        <div class="player-stack">$1500</div>
-        <div class="player-cards">
-          <div class="card small"></div>
-          <div class="card small"></div>
-        </div>
-      </div>
-      <div class="player seat6">
-        <div class="player-name">Player 6</div>
-        <div class="player-stack">$1500</div>
-        <div class="player-cards">
-          <div class="card small"></div>
-          <div class="card small"></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Buttons -->
-    <div class="button-container">
-      <button class="deal-button">Deal Cards</button>
-      <button class="reset-button">Reset Hand</button>
     </div>
   </div>
 
   <script src="/js/script.js"></script>
+  <script>
+    const playerData = JSON.parse(localStorage.getItem('player1'));
+    if (playerData?.nickname) {
+      document.getElementById('player1Name').innerText = playerData.nickname;
+    }
+  </script>
 </body>
 </html>
