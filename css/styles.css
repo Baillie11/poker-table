@@ -1,0 +1,165 @@
+/* PAGE BACKGROUND */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: linear-gradient(135deg, #a8d0f0 0%, #d0eaff 50%, #ffffff 100%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  
+  /* CONTAINER FOR THE TABLE AND BUTTON */
+  .table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 60px 0 40px 0; /* 60px top, 40px bottom */
+    box-sizing: border-box;
+  }
+  
+  
+  
+  /* GREEN ROUND POKER TABLE */
+  .poker-table {
+    width: 70vw;
+    height: 34vw;              /* reduced from 38vw */
+    max-width: 700px;
+    max-height: 360px;         /* reduced from 400px */
+    border-radius: 100%;
+    background: radial-gradient(circle at center, #2e7d32 0%, #1b5e20 100%);
+    position: relative;
+    border: 6px solid #333;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 40px;
+  }
+  
+   
+  /* PLAYER BOXES */
+  .player {
+    position: absolute;
+    background: white;
+    border-radius: 8px;
+    border: 2px solid #004080;
+    width: 100px;             /* increased from 80px */
+    padding: 8px;             /* increased from 6px */
+    font-size: 0.85em;        /* slightly larger text */
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  .player-name {
+    font-weight: bold;
+  }
+  
+  .player-stack {
+    font-size: 0.8em;
+    margin-bottom: 2px;
+  }
+  
+  /* PLAYER CARDS */
+  .player-cards {
+    display: flex;
+    gap: 2px;
+    justify-content: center;
+  }
+  
+  .card {
+    background: #f9f5e9;                   /* subtle off-white / cream */
+    border: 2px solid #333;
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+    min-width: 36px;
+    min-height: 48px;                      /* make cards taller */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+  }
+  
+  .card.small {
+    font-size: 1em;
+    padding: 6px 8px;
+    min-width: 36px;
+    min-height: 48px;
+    background: #f9f5e9;
+    border: 2px solid #333;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+
+  .card:empty {
+    border: none;
+    background: none;
+    padding: 0;
+  }
+  
+  /* COMMUNITY CARDS IN THE CENTER */
+  .community-cards {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 6px;
+  }
+  
+  /* POT DISPLAY */
+  .pot {
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1em;
+    color: gold;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000;
+  }
+  
+  /* BUTTON STYLES */
+  .button-container {
+    margin-top: 40px; /* increased from 20px */
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  
+  .deal-button,
+  .reset-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .deal-button {
+    background: #005c99;
+  }
+  
+  .reset-button {
+    background: #8b0000;
+  }
+  
+  /* PLAYER SEAT POSITIONS (6-SEAT TABLE) */
+  .seat1 { top: 5%; /* changed from -2% or 0% */ left: 50%; transform: translate(-50%, -50%);}
+  .seat2 { top: 25%; left: 90%; transform: translate(-50%, -50%); }
+  .seat3 { top: 75%; left: 90%; transform: translate(-50%, -50%); }
+  .seat4 { top: 102%; left: 50%; transform: translate(-50%, -50%); }
+  .seat5 { top: 75%; left: 10%; transform: translate(-50%, -50%); }
+  .seat6 { top: 25%; left: 10%; transform: translate(-50%, -50%); }
+  
